@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2 style="font-family: 'Upheaval'; color: #7167E3; font-size: 45px;">NFT LINK
+        CHECKER! </h2>
+      <button id="ask"> ? </button>
+      <img src="/assets/alert.png" alt="Hello, it's Professor!" style="margin: -40px auto -30px auto; width: 250px;">
+      <p style="font-family: 'Renomono';">
+        Please click the check button below to make sure this is a valid NFT Website you want to visit.
+      </p>
+      <button id="check" > 
+        <span id="check-web">
+          Check Website 
+        </span>
+        <span id="check-loading">
+          <i class="fa fa-circle-o-notch fa-spin"></i> Checking...
+        </span>
+      </button>
+     
+      <p> Developed by <a href="https://gadjahsociety.com" target="_blank" style="cursor: pointer; color: #8A8C8F"><u>&copy;Gadjah Society</u></a> </p>
+      <br>
+    </div>
+
+    <div class="container" id="ask-content">
+      <img src="/assets/portal.png" alt="The portal" style="margin: 40px 0 -15px; width: 250px;">
+      <button id="back"> &lt; </button>
+      <p style="color: #2B4BF2;"><u style="font-family: 'Renomono';"> How this works? </u></p>
+      <div style="text-align: left;">
+        <ol>
+          <li>This extension will check the validity of the website.</li>
+          <br>
+          <li>If the URL is valid, then "YAY" alert will pop up and you can continue.</li>
+          <br>
+          <li>If the URL is NOT valid, then "WAIT" alert will pop up. This could potentially be a scam website.</li>
+          <br>
+        </ol>
+      </div>
+      <p> Developed by <a href="https://gadjahsociety.com" target="_blank" style="cursor: pointer; color: #8A8C8F"><u>&copy;Gadjah Society</u></a> </p>
+    </div>
+
+    <div class="container" id="yay">
+      <br> <br>
+      <img src="/assets/yay-txt.png" alt="Yay">
+      <img src="/assets/yay.png" style="width: 235px;">
+      <p style="font-family: 'Renomono';">This url is listed in our database. This means that the developer of the project has registered their links to this system</p>
+      <button id="close-check"> Nice! </button>
+      
+      <p> Developed by <a href="https://gadjahsociety.com" target="_blank" style="cursor: pointer; color: #8A8C8F"><u>&copy;Gadjah Society</u></a> </p>
+    </div>
+
+    <div class="container" id="nay">
+      <br> <br>
+      <img src="/assets/nay-txt.png" alt="Nay">
+      <img src="/assets/nay.png" style="width: 185px;">
+      <p style="font-family: 'Renomono';">This url is not listed in our database. This could mean two things:</p>
+      <div style="text-align: left;">
+        <ol>
+          <li style="color: #8A8C8F;">Either the project has not validated their link to this system</li>
+          <br>
+          <li style="color: #8A8C8F;">Or, this might be a scam website!</li>
+        </ol>
+      </div>
+      <button id="close-web" style="background-color: #FF725E; margin-bottom: 5px;"> Exit Website </button>
+      
+      <p> Developed by <a href="https://gadjahsociety.com" target="_blank" style="cursor: pointer; color: #8A8C8F"><u>&copy;Gadjah Society</u></a> </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
