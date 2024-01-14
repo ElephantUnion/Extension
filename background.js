@@ -11,7 +11,7 @@ chrome.tabs.query({active: true, lastFocusedWindow: true}, tabs => {
 chrome.runtime.onMessage.addListener((msg, sender, response) => {
 
     if (msg.name == "fetchMe") {
-        const apiCall = 'https://api.gadjahsocietynft.com/getUrl?url=' + msg.url;
+        const apiCall = 'http://localhost:3000/url/check?url=' + msg.url;
 
         fetch(apiCall).then(function(res) {
             res.json().then(function(data) {

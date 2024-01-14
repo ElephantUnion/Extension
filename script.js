@@ -9,28 +9,30 @@ function setLoading() {
 }
 
 function getCurrentTabUrl() {
-    
-
     var queryInfo = {
         active: true,
         currentWindow: true,
     };
+
+    try {
+        chrome.tabs.query(queryInfo, function(tabs) {
+            var tab = tabs[0];
     
-    chrome.tabs.query(queryInfo, function(tabs) {
-        var tab = tabs[0];
-
-        chrome.runtime.sendMessage({name: "fetchMe", url: tab.url},(response) => {
-            console.log(response);
-
-            if (response.data.match == 1) {
-                document.getElementById("yay").style.top = '0';
-            }
-            else {
-                document.getElementById("nay").style.top = '0';
-
-            }  
-        })
-    });
+            chrome.runtime.sendMessage({name: "fetchMe", url: tab.url},(response) => {
+                if (response.data.isMatch) {
+                    document.getElementById("yay").style.top = '0';
+                }
+                else {
+                    document.getElementById("nay").style.top = '0';
+    
+                }  
+            })
+        });
+    } catch (error) {
+        console.log(error);
+        document.getElementById("nay").style.top = '0';
+    }
+    
 }
 
 document.querySelector('#ask').addEventListener('click', slideIn)
